@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
+}
+
+.App .title {
+  color: var(--Grey, #817D92);
+  text-align: right;
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Heading (M) */
+  font-family: JetBrains Mono;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+}
