@@ -1,0 +1,30 @@
+.characterLength {
+    padding: 24px 32px 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textStyle {
+    color: var(--Almost-White, #E6E5EA);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Body (M) */
+    font-family: JetBrains Mono;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.numberStyle {
+    color: var(--Neon-Green, #A4FFAF);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Heading (L) */
+    font-family: JetBrains Mono;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

@@ -1,8 +1,11 @@
 import './PasswordBody.css'
+import RangeSlider from './RangeSlider'
 
 const PasswordBody = () => {
   return (
-    <div className="PasswordBody">PasswordBody</div>
+    <div className="PasswordBody">
+      <RangeSlider />
+    </div>
   )
 }
 
