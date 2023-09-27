@@ -1,0 +1,17 @@
+.checkmark {
+    cursor: pointer;
+    user-select: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #A4FFAF;
+    background: var(--Dark-Grey, #24232C);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.checked {
+    background-color: #A4FFAF;
+}
+  

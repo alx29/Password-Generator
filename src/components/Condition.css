@@ -1,0 +1,19 @@
+.conditionContainer {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 24px;
+    cursor: pointer;
+}
+
+.conditionContainer .condition {
+    color: var(--Almost-White, #E6E5EA);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Body (M) */
+    font-family: JetBrains Mono;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-left: 24px;
+}

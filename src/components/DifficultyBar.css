@@ -1,0 +1,59 @@
+.difficultyBarContainer {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.difficultyBarContainer .difficultyBarBox {
+    background: #18171F;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.difficultyBarContainer .difficultyBarBox .textStyle {
+    color: var(--Grey, #817D92);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Body (M) */
+    font-family: JetBrains Mono;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.difficultyBarContainer .difficultyBarBox .strength {
+    padding-left: 32px;
+}
+
+.difficultyBarContainer .difficultyBarBox .difficulty {
+    color: var(--Almost-White, #E6E5EA);
+    text-align: right;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Heading (M) */
+    font-family: JetBrains Mono;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: row;
+}
+
+.difficultyBarContainer .difficultyBarBox .difficulty .square {
+    width: 10px;
+    height: 28px;
+    flex-shrink: 0;
+    margin-left: 8px;
+
+    border: 2px solid var(--Almost-White, #E6E5EA);
+}
+
+.difficultyBarContainer .difficultyBarBox .difficulty .difficultyText {
+    margin-right: 7.5px;
+}
