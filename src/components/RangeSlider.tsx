@@ -1,27 +1,30 @@
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent } from 'react'
 import CharacterLength from './CharacterLength'
 import './RangeSlider.css'
+import { useSelector, useDispatch } from 'react-redux';
+import { setPasswordLength } from '../reducer';
 
 const RangeSlider = () => {
-    const [passwordLength, setPasswordLength] = useState(10);
+    const dispatch = useDispatch();
+    const length = useSelector((state) => state.passwordGenerator.length);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setPasswordLength(parseInt(e.target.value));
+        dispatch(setPasswordLength(parseInt(e.target.value, 10)));
     }
 
     const getBackgroundSize = () => {
-        return { backgroundSize: `${(passwordLength * 100) / 20}%` };
+        return { backgroundSize: `${(length * 100) / 20}%` };
     };
 
     return (
         <div>
-            <CharacterLength length={passwordLength}/>
+            <CharacterLength length={length}/>
             <div className='rangeSlider'>
                 <input
                     type="range"
                     min="0"
                     max="20"
-                    value={passwordLength}
+                    value={length}
                     onChange={handleChange}
                     style={getBackgroundSize()}
                 />

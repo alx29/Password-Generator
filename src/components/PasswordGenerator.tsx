@@ -4,7 +4,7 @@ import PasswordHeader from "./PasswordHeader"
 function PasswordGenerator() {
   return (
     <div>
-        <PasswordHeader password="alex"/>
+        <PasswordHeader />
         <PasswordBody />
     </div>
   )

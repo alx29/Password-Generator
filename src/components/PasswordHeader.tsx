@@ -1,11 +1,10 @@
 import './PasswordHeader.css';
 import Copy from "../assets/icon-copy.svg?react";
+import { useSelector } from 'react-redux';
 
-interface PasswordHeaderProps {
-    password: string;
-}
+const PasswordHeader = () => {
+  const password = useSelector((state) => state.passwordGenerator.password);
 
-const PasswordHeader: React.FC<PasswordHeaderProps> = ({ password }) => {
   return (
     <div className="PasswordHeader">
         <div className='password'>{password}</div>
