@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import './Checkbox.css';
-import CheckMark from "../assets/icon-check.svg?react";
+import Checkmark from "../images/Checkmark";
 
 interface ICheckbox {
     checked: boolean;
@@ -28,7 +28,7 @@ const Checkbox: React.FC<ICheckbox> = ({ checked, setChecked }) => {
 
     return (
         <div className={`checkmark ${isChecked ? 'checked' : ''}`} onClick={handleCheckboxChange}>
-            {isHidden && <CheckMark/>}
+            {isHidden && <Checkmark/>}
         </div>
     );
 }

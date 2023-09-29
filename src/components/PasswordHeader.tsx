@@ -1,5 +1,5 @@
 import './PasswordHeader.css';
-import Copy from "../assets/icon-copy.svg?react";
+import Copy from '../images/Copy';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 
@@ -39,7 +39,9 @@ const PasswordHeader = () => {
         <div className='password'>{password}</div>
         <div className='copyContainer'>
           {copied && <div className='copyText'>COPIED</div>}
-          <Copy className="copyIcon" onClick={handleCopy}/>
+          <div className='copyIcon' onClick={handleCopy}>
+            <Copy />
+          </div>
         </div>
     </div>
   )
