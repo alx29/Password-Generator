@@ -26,7 +26,7 @@ export function generatePasswordAlgorithm(state: IPasswordState) {
 
     // Check if at least one character set is selected
     if (validChars.length === 0) {
-        return 'Select at least one character set';
+        return 'Select condition';
     }
 
     let password = '';
@@ -60,7 +60,6 @@ export function generatePasswordAlgorithm(state: IPasswordState) {
 
     // Shuffle the password to make it more random
     password = shuffleString(password);
-    console.log('###', password);
     return password;
 }
 
