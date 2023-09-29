@@ -2,6 +2,7 @@ import './PasswordHeader.css';
 import Copy from '../images/Copy';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+import { IGeneralState } from '../interfaces';
 
 const copyToCLipboard = (textToCopy: string) => {
   const textArea = document.createElement('textarea');
@@ -24,7 +25,7 @@ const copyToCLipboard = (textToCopy: string) => {
 
 const PasswordHeader = () => {
   const [copied, setCopied] = useState(false);
-  const password = useSelector((state) => state.passwordGenerator.password);
+  const password = useSelector((state: IGeneralState) => state.passwordGenerator.password);
 
   const handleCopy = () => {
     setCopied(true);

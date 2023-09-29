@@ -3,10 +3,11 @@ import CharacterLength from './CharacterLength'
 import './RangeSlider.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { setPasswordLength } from '../reducer';
+import { IGeneralState } from '../interfaces';
 
 const RangeSlider = () => {
     const dispatch = useDispatch();
-    const length = useSelector((state) => state.passwordGenerator.length);
+    const length = useSelector((state: IGeneralState) => state.passwordGenerator.length);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         dispatch(setPasswordLength(parseInt(e.target.value, 10)));

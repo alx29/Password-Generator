@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import './DifficultyBar.css'
 import { useEffect, useState } from 'react';
+import { IGeneralState } from '../interfaces';
 
 const DIFFICULTY = ['TOO WEAK!', 'WEAK', 'MEDIUM', 'STRONG'];
 const styles = [
@@ -21,11 +22,11 @@ const styles = [
 function DifficultyBar() {
   const [text, setText] = useState('');
   const [currentStyle, setCurrentStyle] = useState({});
-  const uppercase = useSelector((state) => state.passwordGenerator.includeUppercase);
-  const lowercase = useSelector((state) => state.passwordGenerator.includeLowercase);
-  const numbers = useSelector((state) => state.passwordGenerator.includeNumbers);
-  const specialChars = useSelector((state) => state.passwordGenerator.includeSpecialChars);
-  const password = useSelector((state) => state.passwordGenerator.password);
+  const uppercase = useSelector((state: IGeneralState) => state.passwordGenerator.includeUppercase);
+  const lowercase = useSelector((state: IGeneralState) => state.passwordGenerator.includeLowercase);
+  const numbers = useSelector((state: IGeneralState) => state.passwordGenerator.includeNumbers);
+  const specialChars = useSelector((state: IGeneralState) => state.passwordGenerator.includeSpecialChars);
+  const password = useSelector((state: IGeneralState) => state.passwordGenerator.password);
 
   useEffect(() => {
     const arr = [uppercase, lowercase, numbers, specialChars];
