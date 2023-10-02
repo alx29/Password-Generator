@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
 }
 
